@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    
+
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -38,41 +38,200 @@
             -o-background-size: cover;
             background-size: cover;
         }
-        
-        #mainNav{
+        #mainNav {
             /*font-family:'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
             */
-            font: 'Helvetica';
+            font:'Helvetica';
             background-color: #001E62;
         }
-        .navbar-toggler{
-            color: white!important;
-            background-color: #00B5E2;
-            font-family:Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-        } 
-        
-        .navbar-toggler-right{
+        .navbar-toggler {
             color: white!important;
             background-color: #00B5E2;
             font-family:Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
         }
-        
-        #navbarResponsive{
+        .navbar-toggler-right {
+            color: white!important;
+            background-color: #00B5E2;
+            font-family:Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        }
+        #navbarResponsive {
             color: white!important;
             font-family:Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'!important;
         }
-        
-        #services{
-            color:  #001E62;
-        }        
-        
-        .img-fluid{
+        #services {
+            color: #001E62;
+        }
+        .img-fluid {
             width: 256pximportant;
             height: 256pximportant;
         }
-        
-        .portfolio-caption{
+        .portfolio-caption {
             color: #001E62;
+        }
+        .timeline {
+            position:relative;
+            padding:0;
+            list-style:none
+        }
+        .timeline:before {
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:40px;
+            width:2px;
+            margin-left:-1.5px;
+            content:'';
+            background-color:#e9ecef
+        }
+        .timeline>li {
+            position:relative;
+            min-height:50px;
+            margin-bottom:50px
+        }
+        .timeline>li:after, .timeline>li:before {
+            display:table;
+            content:' '
+        }
+        .timeline>li:after {
+            clear:both
+        }
+        .timeline>li .timeline-panel {
+            position:relative;
+            float:right;
+            width:100%;
+            padding:0 20px 0 100px;
+            text-align:left
+        }
+        .timeline>li .timeline-panel:before {
+            right:auto;
+            left:-15px;
+            border-right-width:15px;
+            border-left-width:0
+        }
+        .timeline>li .timeline-panel:after {
+            right:auto;
+            left:-14px;
+            border-right-width:14px;
+            border-left-width:0
+        }
+        .timeline>li .timeline-image {
+            position:absolute;
+            z-index:100;
+            left:0;
+            width:80px;
+            height:80px;
+            margin-left:0;
+            text-align:center;
+            color:#fff;
+            border:7px solid #e9ecef;
+            border-radius:100%;
+            background-color:#00B5E2;
+        }
+        .timeline>li .timeline-image h4 {
+            font-size:10px;
+            line-height:14px;
+            margin-top:12px
+        }
+        .timeline>li.timeline-inverted>.timeline-panel {
+            float:right;
+            padding:0 20px 0 100px;
+            text-align:left
+        }
+        .timeline>li.timeline-inverted>.timeline-panel:before {
+            right:auto;
+            left:-15px;
+            border-right-width:15px;
+            border-left-width:0
+        }
+        .timeline>li.timeline-inverted>.timeline-panel:after {
+            right:auto;
+            left:-14px;
+            border-right-width:14px;
+            border-left-width:0
+        }
+        .timeline>li:last-child {
+            margin-bottom:0
+        }
+        .timeline .timeline-heading h4 {
+            margin-top:0;
+            color:inherit
+        }
+        .timeline .timeline-heading h4.subheading {
+            text-transform:none
+        }
+        .timeline .timeline-body>p, .timeline .timeline-body>ul {
+            margin-bottom:0
+        }
+        @media (min-width:768px) {
+            .timeline:before {
+                left:50%
+            }
+            .timeline>li {
+                min-height:100px;
+                margin-bottom:100px
+            }
+            .timeline>li .timeline-panel {
+                float:left;
+                width:41%;
+                padding:0 20px 20px 30px;
+                text-align:right
+            }
+            .timeline>li .timeline-image {
+                left:50%;
+                width:100px;
+                height:100px;
+                margin-left:-50px
+            }
+            .timeline>li .timeline-image h4 {
+                font-size:13px;
+                line-height:18px;
+                margin-top:16px
+            }
+            .timeline>li.timeline-inverted>.timeline-panel {
+                float:right;
+                padding:0 30px 20px 20px;
+                text-align:left
+            }
+        }
+        @media (min-width:992px) {
+            .timeline>li {
+                min-height:150px
+            }
+            .timeline>li .timeline-panel {
+                padding:0 20px 20px
+            }
+            .timeline>li .timeline-image {
+                width:150px;
+                height:150px;
+                margin-left:-75px
+            }
+            .timeline>li .timeline-image h4 {
+                font-size:18px;
+                line-height:26px;
+                margin-top:30px
+            }
+            .timeline>li.timeline-inverted>.timeline-panel {
+                padding:0 20px 20px
+            }
+        }
+        @media (min-width:1200px) {
+            .timeline>li {
+                min-height:170px
+            }
+            .timeline>li .timeline-panel {
+                padding:0 20px 20px 100px
+            }
+            .timeline>li .timeline-image {
+                width:170px;
+                height:170px;
+                margin-left:-85px
+            }
+            .timeline>li .timeline-image h4 {
+                margin-top:40px
+            }
+            .timeline>li.timeline-inverted>.timeline-panel {
+                padding:0 100px 20px 20px
+            }
         }
     </style>
 
@@ -83,7 +242,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" font = "" href="#page-top">UIC Tech Center</a>
+            <a class="navbar-brand js-scroll-trigger" font="" href="#page-top">UIC Tech Center</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -102,7 +261,8 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#team">Team</a>
                     </li>
-                    <li class="nav-item">    <!--Link to Coming Soon in the Nav Bar-->
+                    <li class="nav-item">
+                        <!--Link to Coming Soon in the Nav Bar-->
                         <a class="nav-link js-scroll-trigger" href="#coming-soon">Coming soon</a>
                     </li>
                     <li class="nav-item">
@@ -241,7 +401,7 @@
 
 
     <!-- Portfolio Grid -->
-    <section class="bg-light page-section" id="portfolio" style = "text-align: center">
+    <section class="bg-light page-section" id="portfolio" style="text-align: center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -250,24 +410,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-sm-6 portfolio-item">    <!--Changed #Columns-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Changed #Columns-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                         <div class="portfolio-hover">
-                           <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
-                        <img class="img-fluid" src="img/apple.png" height="300" width= "300" alt="APPLE-LOGO">
+                        <img class="img-fluid" src="img/apple.png" height="300" width="300" alt="APPLE-LOGO">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Apple</h4>
                         <p class="text-muted">MacBooks and iPads</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 portfolio-item">    <!--Changed #Columns-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Changed #Columns-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
                         <div class="portfolio-hover">
-                           <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
@@ -278,24 +440,26 @@
                         <p class="text-muted">XPS and Inspiron lineup</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 portfolio-item">    <!--Changed #Columns-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Changed #Columns-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
                         <div class="portfolio-hover">
-                             <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
-                        <img class="img-fluid" src="img/lenovo.png" height="300" width= "300" alt="">
+                        <img class="img-fluid" src="img/lenovo.png" height="300" width="300" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Lenovo</h4>
                         <p class="text-muted">ThinkPad and IdeaPad lineup</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 portfolio-item">    <!--Changed #Columns-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Changed #Columns-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
                         <div class="portfolio-hover">
-                             <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
@@ -306,59 +470,64 @@
                         <p class="text-muted">Surface Lineup</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 portfolio-item">    <!--Changed #Columns-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Changed #Columns-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                         <div class="portfolio-hover">
-                             <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
-                        <img class="img-fluid" src="img/hp.png" height="300" width= "300" alt="">
+                        <img class="img-fluid" src="img/hp.png" height="300" width="300" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>HP</h4>
                         <p class="text-muted">Envy and Spectre Lineup</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 portfolio-item">    <!--Changed #Columns-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Changed #Columns-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
                         <div class="portfolio-hover">
-                             <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
-                        <img class="img-fluid" src="img/razer.png" height="300" width= "300" alt="">
+                        <img class="img-fluid" src="img/razer.png" height="300" width="300" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Razer</h4>
                         <p class="text-muted">Razer Blade and Razer Blade Pro</p>
                     </div>
                 </div>
-                    <div class="col-md-6 col-sm-6 portfolio-item">    <!--Portfolio #7-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Portfolio #7-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
                         <div class="portfolio-hover">
-                             <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
-                        <img class="img-fluid" src="img/alienware.png" height="300" width= "300" alt="">
+                        <img class="img-fluid" src="img/alienware.png" height="300" width="300" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Alienware</h4>
                         <p class="text-muted">Alienware Gaming Laptops</p>
                     </div>
                 </div>
-                    <div class="col-md-6 col-sm-6 portfolio-item">    <!--Portfolio #8-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <!--Portfolio #8-->
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
                         <div class="portfolio-hover">
-                             <!-- <div class="portfolio-hover-content">
+                            <!-- <div class="portfolio-hover-content">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>-->
                         </div>
-                        <img class="img-fluid" src="img/asus.png" height="300" width= "300" alt="ASUS-LOGO">
+                        <img class="img-fluid" src="img/asus.png" height="300" width="300" alt="ASUS-LOGO">
                     </a>
                     <div class="portfolio-caption">
-                        <br><br>
+                        <br>
+                        <br>
                         <h4>Asus</h4>
                         <p class="text-muted">ZenBook lineup</p>
                     </div>
@@ -372,7 +541,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h2 class="section-heading text-uppercase" style="color: #D50032">A brief history of Apple</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
@@ -381,12 +550,12 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/history/mbAir.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                    <h4>2008</h4>
+                                    <h4 class="subheading">Release of the first MacBook Air</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -395,12 +564,12 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/history/mbAir.png" height="50" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
+                                    <h4>2010</h4>
+                                    <h4 class="subheading">The MacBook Air takes off in sales</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -409,12 +578,12 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/history/iPhone5.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
+                                    <h4 class="subheading">The iPhone 5 is released</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -423,12 +592,12 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/history/iPhone5.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                    <h4>2013</h4>
+                                    <h4 class="subheading">The iPhone 5 stops production</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -437,12 +606,13 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/history/macPro.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Additional item in about Section</h4><!--Additional item in about Section-->
+                                    <h4>2012</h4>
+                                    <h4 class="subheading">Trash Can Mac Pro is released</h4>
+                                    <!--Additional item in about Section-->
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -582,8 +752,8 @@
     </section>
 
     <!-- Coming soon! -->
-    <section class = "page-section" id="coming-soon">
-       <div class="container">
+    <section class="page-section" id="coming-soon">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Coming Soon</h2>
@@ -593,7 +763,7 @@
         </div>
         <br>
     </section>
-    
+
     <!-- Contact -->
     <section class="page-section" id="contact">
         <div class="container">
@@ -638,10 +808,12 @@
             </div>
         </div>
     </section>
-    
+
     <!--Map-->
     <section id="contact" class="map">
-        <br><br><br>    
+        <br>
+        <br>
+        <br>
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="20" marginwidth="20" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
         <br>
         <small>
@@ -649,7 +821,7 @@
         </small>
         <br>
         <br>
-     </section>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
