@@ -246,9 +246,28 @@
             margin-top:25px;
             margin-bottom:0;
             text-transform:none
+            color: white;
         }
         .team-member p {
             margin-top:0
+        }
+        #coming-soon {
+            background-color: #001E62;
+            color: white;
+        }
+        #contact {
+            background-color: #001E62!important;
+        }
+        .map {
+            height:30rem;
+        }
+        @media (max-width:992px) {
+            .map {
+                height:75%;
+            }
+        }
+        .map iframe {
+            pointer-events:none;
         }
     </style>
 
@@ -667,7 +686,7 @@
                         <img class="mx-auto rounded-circle" src="img/team/1.jpg" height="300" width="300" alt="">
                         <br>
                         <br>
-                        <h4 style="text-align:center color: #001E62">Siddarth Menon</h4>
+                        <h4 style="text-align:center color: white">Siddarth Menon</h4>
                         <p class="text-muted" style="text-align:center">The Man</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
@@ -693,7 +712,7 @@
                         <img class="mx-auto rounded-circle" src="img/team/2.jpg" height="300" width="300" alt="">
                         <br>
                         <br>
-                        <h4 style="text-align:center color: #001E62">Siddarth Menon</h4>
+                        <h4 style="text-align:center color: white">Siddarth Menon</h4>
                         <p class="text-muted" style="text-align:center">The Myth</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
@@ -719,7 +738,7 @@
                         <img class="mx-auto rounded-circle" src="img/team/3.jpg" height="300" width="300" margin=auto alt="">
                         <br>
                         <br>
-                        <h4 style="text-align:center color: #001E62!important">Siddarth Menon</h4>
+                        <h4 style="text-align:center color: white!important">Siddarth Menon</h4>
                         <p class="text-muted" style="text-align:center">The Legend</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
@@ -783,7 +802,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Coming Soon</h2>
-                    <h3 class="section-subheading text-muted">Working on some imaginary features.</h3>
+                    <h3 class="section-subheading text-muted" style="color: white!important">Working on some imaginary features.</h3>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -791,12 +812,12 @@
     </section>
 
     <!-- Contact -->
-    <section class="page-section" id="contact">
+    <section class="page-section" id="contact" style="background-color: #001E62!important">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase" style="color: #D50032">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted" style="color: white!important">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
@@ -832,21 +853,17 @@
                     </form>
                 </div>
             </div>
+            <br><br>
         </div>
     </section>
 
     <!--Map-->
     <section id="contact" class="map">
-        <br>
-        <br>
-        <br>
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="20" marginwidth="20" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br>
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+        <br />
         <small>
-          <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        <br>
-        <br>
+      <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+    </small>
     </section>
 
     <!-- Footer -->
